@@ -1,12 +1,15 @@
 import yara
 import sys
 import os
-rules = yara.compile(filepath="rules/test.yar")
 if len(sys.argv) < 2:
-    print("Uso: python scanner.py <archivo>")
+    print("Usage: python scanner.py <file>")
     sys.exit(1)
 if not os.path.isfile(sys.argv[1]):
-    print(f"Error: el archivo no existe: {sys.argv[1]}")
+    print(f"Error: {sys.argv[1]} does not exist")
     sys.exit(1)
+rules = yara.compile(filepath="rules/test.yar")
 matches = rules.match(sys.argv[1])
-print(matches)
+if matches:
+    print(f"{sys.argv[1]} has been reported as infected!!")
+else:
+    print(f"{sys.argv[1]} is clean")
