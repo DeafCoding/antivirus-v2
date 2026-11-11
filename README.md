@@ -21,5 +21,5 @@ samples/clean.txt is clean
 ## Roadmap
 - [x] Show which rule matched
 - [x] Scan entire folders
-- [ ] Multiple rule files
+- [x] Multiple rule files
 - [ ] Tests
