@@ -22,4 +22,9 @@ samples/clean.txt is clean
 - [x] Show which rule matched
 - [x] Scan entire folders
 - [x] Multiple rule files
-- [ ] Tests
+- [x] Tests
+
+## Testing
+```bash
+pytest -v
+```

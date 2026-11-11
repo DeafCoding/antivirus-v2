@@ -16,20 +16,22 @@ def scan_file(rules, path):
             print(match.rule)
     else:
         print(f"{path} is clean")
-if len(sys.argv) < 2:
-    print("Usage: python scanner.py <file>| <folder>")
-    sys.exit(1)
+    return matches
+
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print("Usage: python scanner.py <file>| <folder>")
+        sys.exit(1)
 
 
-rules = load_rules("rules")
-if os.path.isfile(sys.argv[1]):
-    scan_file(rules, sys.argv[1])
-elif os.path.isdir(sys.argv[1]):
-    
-    for name in os.listdir(sys.argv[1]):
-        caminho = os.path.join(sys.argv[1], name)
-        scan_file(rules, caminho)
-else:
-    print(f"{sys.argv[1]} not found: What were you looking for?")
-    sys.exit(1)
-
+    rules = load_rules("rules")
+    if os.path.isfile(sys.argv[1]):
+        scan_file(rules, sys.argv[1])
+    elif os.path.isdir(sys.argv[1]):
+        
+        for name in os.listdir(sys.argv[1]):
+            caminho = os.path.join(sys.argv[1], name)
+            scan_file(rules, caminho)
+    else:
+        print(f"{sys.argv[1]} not found: What were you looking for?")
+        sys.exit(1)
