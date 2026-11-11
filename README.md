@@ -20,6 +20,6 @@ samples/clean.txt is clean
 ```
 ## Roadmap
 - [x] Show which rule matched
-- [ ] Scan entire folders
+- [x] Scan entire folders
 - [ ] Multiple rule files
 - [ ] Tests
