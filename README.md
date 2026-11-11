@@ -12,13 +12,14 @@ Is A command line tool that scans a file against YARA rules, and tells you if th
 ## Example
 ```bash
 $ python scanner.py samples/infected.txt
-samples/infected.txt has been reported as infected!!
+samples/infected.txt has been reported with:
+juancho_test
 
 $ python scanner.py samples/clean.txt
 samples/clean.txt is clean
 ```
 ## Roadmap
-- [ ] Show which rule matched
+- [x] Show which rule matched
 - [ ] Scan entire folders
 - [ ] Multiple rule files
 - [ ] Tests
