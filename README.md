@@ -28,3 +28,10 @@ samples/clean.txt is clean
 ```bash
 pytest -v
 ```
+
+## Roadmap v2.0
+- [x] SHA-256 hash detection against a known-malware list
+- [ ] Hash lookup via MalwareBazaar API
+- [ ] Heuristics (entropy check for packed files)
+- [ ] Quarantine folder
+- [ ] Real-time folder monitor (watchdog)
